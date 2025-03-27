@@ -1,3 +1,42 @@
+/* Load custom fonts */
+@font-face {
+    font-family: 'Roboto VariableFont wdth,wght';
+    src: url('/assets/fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Italic VariableFont wdth,wght';
+    src: url('/assets/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed Thin';
+    src: url('/assets/fonts/Roboto_Condensed-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed ExtraLight';
+    src: url('/assets/fonts/Roboto_Condensed-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed Regular';
+    src: url('/assets/fonts/Roboto_Condensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Use custom font for headings */
+h1, h2, h3 {
+    font-family: 'Roboto VariableFont wdth,wght', sans-serif;
+}
 /* Overwriting Themes */
 :root {
     --marine-coders-bg: #252a34;
@@ -203,7 +242,7 @@ body {
 }
 
 .banner__inner {
-    font-family: Source Sans Pro Web, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Public Sans Web", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-size: .75rem !important;
     line-height: 1.5;
     margin: 0px;

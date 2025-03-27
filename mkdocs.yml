@@ -48,7 +48,7 @@ theme:
     - announce.dismiss
     
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/typography.css
 
 markdown_extensions:
   - def_list
@@ -70,8 +70,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true 
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - footnotes
   - pymdownx.superfences:
       custom_fences:
@@ -83,9 +83,11 @@ markdown_extensions:
 
 plugins:
   - social:
-      cards_color:
-        fill: "#252a34" 
-        text: "#FFFFFF"
+      cards_layout: default/variant
+      cards_layout_options:
+        background_color: "#252a34"
+        color: "#FFFFFF"
+        typography: false
   - blog:
       authors_file: .authors.yml
       authors_in_excerpt: 2
