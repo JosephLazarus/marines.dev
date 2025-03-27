@@ -58,3 +58,74 @@ To continue to built onto this boiler plate please follow MkDocs or MkDocs-Mater
 ## Contributors
 
 We are open to contributors please view [contributions.md](/CONTRIBUTIONS.md)
+
+## Custom Plugin Modification: `plugin.py` From updatesAT
+
+A modified version of the MkDocs Material **Social plugin** is included in this repo at:
+
+overrides/material/plugins/social/plugin.py
+
+
+### ✅ Why this exists
+
+This file overrides the default plugin located at:
+
+Lib/site-packages/material/plugins/social/plugin.py
+
+
+It has been **patched** to avoid issues caused by upstream changes to the way Google Fonts are fetched.
+
+### 🧨 The Problem
+
+The original plugin attempted to download Google Fonts (e.g., `Roboto`) as `.zip` files from [fonts.google.com](https://fonts.google.com). However, Google **disabled downloading fonts via `.zip` URLs**, which led to the following error when building or serving the site:
+
+**ERROR** 
+RealGetContents raise BadZipFile("File is not a zip file") zipfile.BadZipFile: File is not a zip file
+
+
+After disabling the download logic, another issue appeared due to **recursive fallback logic** not being properly terminated:
+
+RecursionError: maximum recursion depth exceeded in comparison
+
+
+### ✅ The Fix
+
+Made two key changes:
+
+1. **Disabled the call to** `_fetch_font_from_google_fonts()` to stop trying to fetch fonts from Google.
+2. **Added a short-circuit in** `_resolve_font()` to avoid infinite recursion if the requested font style isn't available.
+
+This prevents the site from crashing and allows it to build and serve successfully **without external font dependencies**.
+
+---
+
+### 🧩 Optional: Downloading Fonts Locally
+
+If you want to **retain social card typography** while avoiding external font requests, you can **manually download the fonts** and place them where the plugin expects them.
+
+#### ✅ Steps:
+
+1. **Download Roboto Font**:
+   - Visit [https://fonts.google.com/specimen/Roboto](https://fonts.google.com/specimen/Roboto)
+   - Click **Download Family** to get a `.zip` file.
+   - Extract the `.ttf` files.
+
+2. **Locate Your Cache Directory**:
+   The social plugin looks for fonts in: marines.dev\.cache\plugin\social\fonts\Roboto
+
+   
+3. **Copy the Fonts**:
+Place the desired `.ttf` files (e.g., `Roboto-Regular.ttf`, `Roboto-Bold.ttf`, etc.) inside that folder.
+
+
+#### Once placed correctly, your custom plugin will use these local fonts instead of trying to fetch them from Google.
+
+
+
+
+---
+
+
+
+
+
