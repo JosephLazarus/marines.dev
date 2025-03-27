@@ -23,13 +23,14 @@ hide:
 
     [:octicons-arrow-right-24:Learn about our Projects](/projects)
 
--   [:material-account-group-outline:{ .lg .middle } __Join Marine Coders Chat__](/chat)
+-   [:material-account-group-outline:{ .lg .middle } __Join Marine Coders at the Marine Innovation Unit__](https://www.marforres.marines.mil/MIU/)
+
 
     ---
 
-    Let’s build together. Join a community of practice
+    SUBMIT YOUR APPLICATION HERE
 
-    [:octicons-arrow-right-24: Chat With Us](/chat)
+    [:octicons-arrow-right-24: Apply Here](https://www.marforres.marines.mil/MIU/)
 
 -   [:material-school:{ .lg .middle } __Learn to Code__](/learn)
 
