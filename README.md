@@ -119,10 +119,6 @@ Place the desired `.ttf` files (e.g., `Roboto-Regular.ttf`, `Roboto-Bold.ttf`, e
 
 
 #### Once placed correctly, your custom plugin will use these local fonts instead of trying to fetch them from Google.
-
-
-
-
 ---
 
 
