@@ -2,6 +2,22 @@
 
 The below are a collection of open source projects that Marine Coders maintains on best effort. This is not a full collection, with some being hosted in other environments.
 
+### Reserve Hub
+
+A platform requested by SMMC Ruiz to make it easier for Marines, Career Planners, and Prior Service Recruiters to find open SMCR billets. By improving visibility and accessibility of reserve opportunities, this tool helps boost retention across the force.
+
+### ARES
+
+Marine Coders developed a TAK plug-in that uses NGA data to assess HLZ viability. By collaborating with MCTSSA, MAGTAB, and MCH offices, MIU Coders reduced HLZ generation time from 50 seconds to just 10.
+
+### Flight Mode
+
+Built at the request of MAWTS-1, this TAK UI improvement reduces cognitive load for pilots. The updated interface is more intuitive and mobile-friendly, replacing small, hard-to-use buttons with a design tailored for fast-paced operations.
+
+### File Detective
+
+Developed in partnership with Army software developers, File Detective is a high-speed search tool for the JSOC External Operations Platform. It improves the ability to search captured enemy materials.
+
 ### COVID Tracker Scanner
 
 A technology based solution using Common Access Cards and a scanner to hygienically track COVID for a stand-alone location.
